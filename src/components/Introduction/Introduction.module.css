@@ -1,0 +1,12 @@
+.title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 32px;
+  color: var(--title-color);
+}
+
+.subtitle {
+  margin: 0;
+  margin-bottom: 32px;
+  color: var(--text-color);
+}

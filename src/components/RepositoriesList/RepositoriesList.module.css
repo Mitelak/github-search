@@ -1,0 +1,31 @@
+.title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: var(--title-color);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.item {
+  background: #fff;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+}
+
+.link {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: var(--button-bg);
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: var(--button-bg-hover);
+}

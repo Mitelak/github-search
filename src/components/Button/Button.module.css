@@ -4,12 +4,12 @@
   border: none;
   padding: 10px 20px;
   color: #fff;
-  background: #452cdc;
+  background: var(--button-bg);
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
 
 .button:hover {
-  background: #2c7bdc;
+  background: var(--button-bg-hover);
 }

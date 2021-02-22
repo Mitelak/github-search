@@ -1,0 +1,26 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+.name {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1;
+  color: var(--title-color);
+}
+
+.bio {
+  grid-column: 1 / -1;
+  color: var(--text-color);
+}

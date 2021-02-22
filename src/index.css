@@ -1,3 +1,11 @@
+:root {
+  --page-bg: #fbfcfd;
+  --button-bg: #452cdc;
+  --button-bg-hover: #872cdc;
+  --title-color: #292f3c;
+  --text-color: #868d9c;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,7 +13,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fbfcfd;
+  background: var(--page-bg);
 }
 
 code {
