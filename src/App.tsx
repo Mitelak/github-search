@@ -3,20 +3,20 @@ import * as React from 'react';
 import Topbar from 'components/Topbar';
 import Introduction from 'components/Introduction';
 import UserDetails from 'components/UserDetails';
-import RepositoriesList from 'components/RepositoriesList';
+import Container from 'components/Container';
+
+import styles from './App.module.css';
 
 const App = () => {
   const [userName, setUserName] = React.useState<string>('');
 
   return (
-    <div>
+    <>
       <Topbar onSearch={setUserName} />
-
-      {!userName && <Introduction />}
-
-      <UserDetails />
-      <RepositoriesList />
-    </div>
+      <Container className={styles.content}>
+        {userName ? <UserDetails name={userName} /> : <Introduction />}
+      </Container>
+    </>
   );
 };
 

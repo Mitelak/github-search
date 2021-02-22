@@ -3,7 +3,7 @@
   line-height: 1;
   border: none;
   padding: 10px 20px;
-  color: #fff;
+  color: var(--white-color);
   background: var(--button-bg);
   border-radius: 8px;
   cursor: pointer;

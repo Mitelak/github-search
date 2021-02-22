@@ -1,23 +1,51 @@
 import * as React from 'react';
 
-import Container from 'components/Container';
+import github, { RepositoryShape } from 'api/github';
+import List from 'components/List';
+import Loader from 'components/Loader';
 
 import styles from './UserDetails.module.css';
 
-const UserDetails = () => {
+const RepositoryItem = ({ html_url, name }: RepositoryShape) => (
+  <a href={html_url} className={styles.repoLink}>
+    {name}
+  </a>
+);
+
+interface UserDetailsProps {
+  name: string;
+}
+
+const UserDetails = ({ name }: UserDetailsProps) => {
+  const user = github.useUser(name);
+  const repos = github.useRepositories(name);
+
+  if (user.error) {
+    return <p className={styles.error}>{user.error}</p>;
+  }
+
+  if (!user.data || user.isLoading) {
+    return <Loader />;
+  }
+
   return (
-    <Container className={styles.wrapper}>
-      <img
-        className={styles.avatar}
-        src="https://source.unsplash.com/200x300/?portrait"
-        alt=""
-      />
-      <h1 className={styles.name}>Mateusz Mitelski</h1>
-      <p className={styles.bio}>
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry.
-      </p>
-    </Container>
+    <>
+      <section className={styles.user}>
+        <img className={styles.avatar} src={user.data.avatar_url} alt="" />
+        <h1 className={styles.name}>{user.data.name ?? user.data.login}</h1>
+        {user.data.bio && <p className={styles.bio}>{user.data.bio}</p>}
+      </section>
+
+      <section>
+        <h2 className={styles.reposTitle}>Top repositories</h2>
+        <List
+          items={repos.data?.items}
+          renderItem={RepositoryItem}
+          isLoading={repos.isLoading}
+          error={repos.error && 'Repositories not available'}
+        />
+      </section>
+    </>
   );
 };
 

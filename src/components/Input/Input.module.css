@@ -1,6 +1,4 @@
 .inputWrapper {
-  background: #f0f3f4;
-  border-radius: 8px;
   display: flex;
   align-items: center;
 }
@@ -9,13 +7,19 @@
   font-family: inherit;
   padding: 10px;
   border: none;
-  background: transparent;
+  background: var(--input-bg);
+  border-radius: 8px;
   width: 100%;
 }
 
 .startIcon {
-  height: 18px;
-  width: 18px;
-  color: #4f4f4f;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  color: var(--input-icon-color);
   padding-left: 10px;
+}
+
+.startIcon ~ .input {
+  padding-left: 32px;
 }

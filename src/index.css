@@ -1,9 +1,20 @@
 :root {
   --page-bg: #fbfcfd;
   --button-bg: #452cdc;
-  --button-bg-hover: #872cdc;
+  --button-bg-hover: #2000d6;
   --title-color: #292f3c;
   --text-color: #868d9c;
+  --link-color: #452cdc;
+  --link-color-hover: #140083;
+  --input-bg: #f0f3f4;
+  --input-icon-color: #4f4f4f;
+  --white-color: #fff;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 body {
