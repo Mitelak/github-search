@@ -1,0 +1,16 @@
+.topbar {
+  background: #fff;
+  display: flex;
+  box-shadow: 0 2px 7px -1px rgba(0, 0, 0, 0.08);
+  padding: 24px 0;
+}
+
+.form {
+  display: flex;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  margin-right: 10px;
+}

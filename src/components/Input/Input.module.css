@@ -1,0 +1,21 @@
+.inputWrapper {
+  background: #f0f3f4;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  font-family: inherit;
+  padding: 10px;
+  border: none;
+  background: transparent;
+  width: 100%;
+}
+
+.startIcon {
+  height: 18px;
+  width: 18px;
+  color: #4f4f4f;
+  padding-left: 10px;
+}
