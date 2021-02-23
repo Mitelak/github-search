@@ -1,20 +1,6 @@
 import { renderHook, act } from '@testing-library/react-hooks';
+import { mockFetch } from 'utils';
 import useFetch from '../useFetch';
-
-/*
- * In typical cases, it could be done using some mocking library.
- * `any` is just to make it works without the need of overriding the full Response object.
- */
-const mockFetch = (data: unknown): Promise<any> =>
-  new Promise((resolve) =>
-    setTimeout(() => {
-      resolve({
-        ok: true,
-        status: 200,
-        json: () => Promise.resolve(data),
-      });
-    }, 100)
-  );
 
 const SUCCESS_RESPONSE = 'TEST_RESPONSE';
 

@@ -8,7 +8,7 @@ import Container from 'components/Container';
 import styles from './App.module.css';
 
 const App = () => {
-  const [userName, setUserName] = React.useState<string>('');
+  const [userName, setUserName] = React.useState<string>();
 
   return (
     <>
